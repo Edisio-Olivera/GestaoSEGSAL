@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B993AACF-4498-4B36-92F1-3B2FACE07200}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GestaoSEGSAL</RootNamespace>
+    <AssemblyName>GestaoSEGSAL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BankAccountBLL.cs" />
+    <Compile Include="BLL\BankAccountTypeBLL.cs" />
+    <Compile Include="BLL\BankBLL.cs" />
+    <Compile Include="BLL\BankCardBandBLL.cs" />
+    <Compile Include="BLL\BankCardBLL.cs" />
+    <Compile Include="BLL\BankCardStatusBLL.cs" />
+    <Compile Include="BLL\BankCardTypeBLL.cs" />
+    <Compile Include="BLL\BaseClientBLL.cs" />
+    <Compile Include="BLL\BussinessProposalBLL.cs" />
+    <Compile Include="BLL\BussinessProposalServiceBLL.cs" />
+    <Compile Include="BLL\BussinessProposalStatusBLL.cs" />
+    <Compile Include="BLL\ClientBLL.cs" />
+    <Compile Include="BLL\CompanyBLL.cs" />
+    <Compile Include="BLL\FinancialMovementBLL.cs" />
+    <Compile Include="BLL\FinancialMovementStatusBLL.cs" />
+    <Compile Include="BLL\FinancialMovementTypeBLL.cs" />
+    <Compile Include="BLL\InvoiceBLL.cs" />
+    <Compile Include="BLL\InvoiceStatusBLL.cs" />
+    <Compile Include="BLL\InvoiceTypeBLL.cs" />
+    <Compile Include="BLL\PaymentFormBLL.cs" />
+    <Compile Include="BLL\PaymentTermsBLL.cs" />
+    <Compile Include="BLL\ServiceTypeBLL.cs" />
+    <Compile Include="DAO\ConnectionFactory.cs" />
+    <Compile Include="db_gestao_segsalDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_gestao_segsalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_gestao_segsalDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_gestao_segsalDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_gestao_segsalDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_gestao_segsalDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_gestao_segsalDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_gestao_segsalDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\BankAccountDTO.cs" />
+    <Compile Include="DTO\BankAccountTypeDTO.cs" />
+    <Compile Include="DTO\BankCardBandDTO.cs" />
+    <Compile Include="DTO\BankCardDTO.cs" />
+    <Compile Include="DTO\BankCardStatusDTO.cs" />
+    <Compile Include="DTO\BankCardTypeDTO.cs" />
+    <Compile Include="DTO\BankDTO.cs" />
+    <Compile Include="DTO\BaseClientDTO.cs" />
+    <Compile Include="DTO\BillsToPayDTO.cs" />
+    <Compile Include="DTO\BussinessProposalDTO.cs" />
+    <Compile Include="DTO\BussinessProposalServiceDTO.cs" />
+    <Compile Include="DTO\BussinessProposalStatusDTO.cs" />
+    <Compile Include="DTO\CityDTO.cs" />
+    <Compile Include="DTO\ClientDTO.cs" />
+    <Compile Include="DTO\CompanyDTO.cs" />
+    <Compile Include="DTO\FederationStateDTO.cs" />
+    <Compile Include="DTO\FinancialMovementDTO.cs" />
+    <Compile Include="DTO\FinancialMovementStatusDTO.cs" />
+    <Compile Include="DTO\FinancialMovementTypeDTO.cs" />
+    <Compile Include="DTO\InvoiceDTO.cs" />
+    <Compile Include="DTO\InvoiceStatusDTO.cs" />
+    <Compile Include="DTO\InvoiceTypeDTO.cs" />
+    <Compile Include="DTO\PaymentFormDTO.cs" />
+    <Compile Include="DTO\PaymentTermsDTO.cs" />
+    <Compile Include="DTO\ServiceTypeDTO.cs" />
+    <Compile Include="Report\frm_bussinessProposalReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frm_bussinessProposalReportViewer.Designer.cs">
+      <DependentUpon>frm_bussinessProposalReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="View\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\frm_addBillsToPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_addBillsToPay.Designer.cs">
+      <DependentUpon>frm_addBillsToPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frm_addBillsToReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_addBillsToReceive.Designer.cs">
+      <DependentUpon>frm_addBillsToReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frm_addBussinessProposal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_addBussinessProposal.Designer.cs">
+      <DependentUpon>frm_addBussinessProposal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frm_addInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_addInvoice.Designer.cs">
+      <DependentUpon>frm_addInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frm_addServiceBussinessProposal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_addServiceBussinessProposal.Designer.cs">
+      <DependentUpon>frm_addServiceBussinessProposal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frm_listBillsToPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_listBillsToPay.Designer.cs">
+      <DependentUpon>frm_listBillsToPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frm_listBillsToReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_listBillsToReceive.Designer.cs">
+      <DependentUpon>frm_listBillsToReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frm_listBussinesProposal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_listBussinesProposal.Designer.cs">
+      <DependentUpon>frm_listBussinesProposal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frm_listInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_listInvoice.Designer.cs">
+      <DependentUpon>frm_listInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frm_loginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_loginScreen.Designer.cs">
+      <DependentUpon>frm_loginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frm_mainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_mainScreen.Designer.cs">
+      <DependentUpon>frm_mainScreen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Report\BussinessProposalReport.rdlc" />
+    <EmbeddedResource Include="Report\frm_bussinessProposalReportViewer.resx">
+      <DependentUpon>frm_bussinessProposalReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\frm_addBillsToPay.resx">
+      <DependentUpon>frm_addBillsToPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_addBillsToReceive.resx">
+      <DependentUpon>frm_addBillsToReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_addBussinessProposal.resx">
+      <DependentUpon>frm_addBussinessProposal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_addInvoice.resx">
+      <DependentUpon>frm_addInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_addServiceBussinessProposal.resx">
+      <DependentUpon>frm_addServiceBussinessProposal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_listBillsToPay.resx">
+      <DependentUpon>frm_listBillsToPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_listBillsToReceive.resx">
+      <DependentUpon>frm_listBillsToReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_listBussinesProposal.resx">
+      <DependentUpon>frm_listBussinesProposal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_listInvoice.resx">
+      <DependentUpon>frm_listInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_loginScreen.resx">
+      <DependentUpon>frm_loginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_mainScreen.resx">
+      <DependentUpon>frm_mainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="db_gestao_segsalDataSet.xsc">
+      <DependentUpon>db_gestao_segsalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_gestao_segsalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_gestao_segsalDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_gestao_segsalDataSet.xss">
+      <DependentUpon>db_gestao_segsalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_gestao_segsalDataSet1.xsc">
+      <DependentUpon>db_gestao_segsalDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="db_gestao_segsalDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_gestao_segsalDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_gestao_segsalDataSet1.xss">
+      <DependentUpon>db_gestao_segsalDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="db_gestao_segsalDataSet2.xsc">
+      <DependentUpon>db_gestao_segsalDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="db_gestao_segsalDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_gestao_segsalDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_gestao_segsalDataSet2.xss">
+      <DependentUpon>db_gestao_segsalDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="db_gestao_segsalDataSet3.xsc">
+      <DependentUpon>db_gestao_segsalDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="db_gestao_segsalDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_gestao_segsalDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_gestao_segsalDataSet3.xss">
+      <DependentUpon>db_gestao_segsalDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telaSplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadeado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\destaquecftv %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_sair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_novo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_salvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_deletar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_servico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_imprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_atualizar.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

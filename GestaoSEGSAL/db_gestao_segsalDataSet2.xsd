@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="db_gestao_segsalDataSet2" targetNamespace="http://tempuri.org/db_gestao_segsalDataSet2.xsd" xmlns:mstns="http://tempuri.org/db_gestao_segsalDataSet2.xsd" xmlns="http://tempuri.org/db_gestao_segsalDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="db_gestao_segsalConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_gestao_segsalConnectionString (Settings)" PropertyReference="ApplicationSettings.GestaoSEGSAL.Properties.Settings.GlobalReference.Default.db_gestao_segsalConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="cs_servicesTableAdapter" GeneratorDataComponentClassName="cs_servicesTableAdapter" Name="cs_services" UserDataComponentName="cs_servicesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_gestao_segsalConnectionString (Settings)" DbObjectName="cs_services" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT quantity, service, unitaryValue, amount, serviceType FROM cs_services</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="quantity" DataSetColumn="quantity" />
+              <Mapping SourceColumn="service" DataSetColumn="service" />
+              <Mapping SourceColumn="unitaryValue" DataSetColumn="unitaryValue" />
+              <Mapping SourceColumn="amount" DataSetColumn="amount" />
+              <Mapping SourceColumn="serviceType" DataSetColumn="serviceType" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="db_gestao_segsalDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="db_gestao_segsalDataSet2" msprop:Generator_UserDSName="db_gestao_segsalDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="cs_services" msprop:Generator_TableClassName="cs_servicesDataTable" msprop:Generator_TableVarName="tablecs_services" msprop:Generator_TablePropName="cs_services" msprop:Generator_RowDeletingName="cs_servicesRowDeleting" msprop:Generator_RowChangingName="cs_servicesRowChanging" msprop:Generator_RowEvHandlerName="cs_servicesRowChangeEventHandler" msprop:Generator_RowDeletedName="cs_servicesRowDeleted" msprop:Generator_UserTableName="cs_services" msprop:Generator_RowChangedName="cs_servicesRowChanged" msprop:Generator_RowEvArgName="cs_servicesRowChangeEvent" msprop:Generator_RowClassName="cs_servicesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="quantity" msprop:Generator_ColumnVarNameInTable="columnquantity" msprop:Generator_ColumnPropNameInRow="quantity" msprop:Generator_ColumnPropNameInTable="quantityColumn" msprop:Generator_UserColumnName="quantity" type="xs:int" minOccurs="0" />
+              <xs:element name="service" msprop:Generator_ColumnVarNameInTable="columnservice" msprop:Generator_ColumnPropNameInRow="service" msprop:Generator_ColumnPropNameInTable="serviceColumn" msprop:Generator_UserColumnName="service" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="unitaryValue" msprop:Generator_ColumnVarNameInTable="columnunitaryValue" msprop:Generator_ColumnPropNameInRow="unitaryValue" msprop:Generator_ColumnPropNameInTable="unitaryValueColumn" msprop:Generator_UserColumnName="unitaryValue" type="xs:int" minOccurs="0" />
+              <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:int" minOccurs="0" />
+              <xs:element name="serviceType" msprop:Generator_ColumnVarNameInTable="columnserviceType" msprop:Generator_ColumnPropNameInRow="serviceType" msprop:Generator_ColumnPropNameInTable="serviceTypeColumn" msprop:Generator_UserColumnName="serviceType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

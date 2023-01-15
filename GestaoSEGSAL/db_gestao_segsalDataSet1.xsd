@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="db_gestao_segsalDataSet1" targetNamespace="http://tempuri.org/db_gestao_segsalDataSet1.xsd" xmlns:mstns="http://tempuri.org/db_gestao_segsalDataSet1.xsd" xmlns="http://tempuri.org/db_gestao_segsalDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="db_gestao_segsalConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_gestao_segsalConnectionString (Settings)" PropertyReference="ApplicationSettings.GestaoSEGSAL.Properties.Settings.GlobalReference.Default.db_gestao_segsalConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Consulta1TableAdapter" GeneratorDataComponentClassName="Consulta1TableAdapter" Name="Consulta1" UserDataComponentName="Consulta1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_gestao_segsalConnectionString (Settings)" DbObjectName="Consulta1" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT code FROM Consulta1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="code" DataSetColumn="code" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="db_gestao_segsalDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="db_gestao_segsalDataSet1" msprop:Generator_UserDSName="db_gestao_segsalDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Consulta1" msprop:Generator_TableClassName="Consulta1DataTable" msprop:Generator_TableVarName="tableConsulta1" msprop:Generator_TablePropName="Consulta1" msprop:Generator_RowDeletingName="Consulta1RowDeleting" msprop:Generator_RowChangingName="Consulta1RowChanging" msprop:Generator_RowEvHandlerName="Consulta1RowChangeEventHandler" msprop:Generator_RowDeletedName="Consulta1RowDeleted" msprop:Generator_UserTableName="Consulta1" msprop:Generator_RowChangedName="Consulta1RowChanged" msprop:Generator_RowEvArgName="Consulta1RowChangeEvent" msprop:Generator_RowClassName="Consulta1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnPropNameInTable="codeColumn" msprop:Generator_UserColumnName="code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Consulta1" />
+      <xs:field xpath="mstns:code" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
